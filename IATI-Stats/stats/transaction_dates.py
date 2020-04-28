@@ -7,7 +7,7 @@ class ActivityFileStats(object):
     pass
 
 class ActivityStats(stats.dashboard.ActivityStats):
-    enabled_stats = ['transaction_dates']
+    enabled_stats = ['activities', 'transaction_dates']
 
 class OrganisationFileStats(object):
     pass
