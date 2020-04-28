@@ -248,9 +248,9 @@ for publisher in current_stats['inverted_publisher']['activities']:
 publishers_ordered_by_title.sort(key=lambda x: unicode.lower(x[0]))
 
 # List of publishers who report all their activities as a secondary publisher
-secondary_publishers = [publisher for publisher, stats in JSONDir('./stats-calculated/current/aggregated-publisher').items()
-                        if int(stats['activities']) == len(stats['activities_secondary_reported']) and
-                        int(stats['activities']) > 0]
+secondary_publishers = [] # [publisher for publisher, stats in JSONDir('./stats-calculated/current/aggregated-publisher').items()
+                        # if int(stats['activities']) == len(stats['activities_secondary_reported']) and
+                        # int(stats['activities']) > 0]
 
 try:
     dac2012 = {x[0]: Decimal(x[1].replace(',', '')) for x in csv.reader(open('data/dac2012.csv'))}
@@ -270,5 +270,5 @@ def make_slugs(keys):
 
 
 slugs = {
-    'element': make_slugs(current_stats['inverted_publisher']['elements'].keys())
+#    'element': make_slugs(current_stats['inverted_publisher']['elements'].keys())
 }

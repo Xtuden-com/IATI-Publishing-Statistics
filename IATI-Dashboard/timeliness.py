@@ -120,8 +120,8 @@ def publisher_frequency():
                 frequency = 'Less than Annual'
 
         # If the publisher is in the list of current publishers, return a generator object
-        if publisher in publisher_name:
-            yield publisher, publisher_name.get(publisher), updates_per_month, frequency
+        if True: # publisher in publisher_name:
+            yield publisher, publisher, updates_per_month, frequency
 
 
 def frequency_index(frequency):

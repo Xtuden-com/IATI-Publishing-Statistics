@@ -121,17 +121,17 @@ app.jinja_env.globals['codelist_sets'] = codelist_sets
 app.jinja_env.globals['get_codelist_values'] = get_codelist_values
 
 basic_page_names = [
-    'publishing_stats',
+ #   'publishing_stats',
     'timeliness',
-    'timeliness_timelag',
-    'forwardlooking',
-    'comprehensiveness',
-    'comprehensiveness_core',
-    'comprehensiveness_financials',
-    'comprehensiveness_valueadded',
-    'coverage',
-    'summary_stats',
-    'humanitarian',
+ #   'timeliness_timelag',
+ #   'forwardlooking',
+ #   'comprehensiveness',
+ #   'comprehensiveness_core',
+ #   'comprehensiveness_financials',
+ #   'comprehensiveness_valueadded',
+ #   'coverage',
+ #   'summary_stats',
+ #   'humanitarian',
 ]
 
 
@@ -166,19 +166,19 @@ def basic_page(page_name):
 # app.add_url_rule('/', 'index_redirect', lambda: redirect('index.html'))
 
 
-# Server an image through the development server (--live)
-@app.route('/<image>.png')
-def image_development(image):
-    return Response(open(os.path.join('out', image + '.png')).read(), mimetype='image/png')
-
-@app.route('/<name>.csv')
-def csv_development(name):
-    return Response(open(os.path.join('out', name + '.csv')).read(), mimetype='text/csv')
-
-@app.route('/publisher_imgs/<image>.png')
-def image_development_publisher(image):
-    print(image)
-    return Response(open(os.path.join('out', 'publisher_imgs', image + '.png')).read(), mimetype='image/png')
+## Server an image through the development server (--live)
+#@app.route('/<image>.png')
+#def image_development(image):
+#    return Response(open(os.path.join('out', image + '.png')).read(), mimetype='image/png')
+#
+#@app.route('/<name>.csv')
+#def csv_development(name):
+#    return Response(open(os.path.join('out', name + '.csv')).read(), mimetype='text/csv')
+#
+#@app.route('/publisher_imgs/<image>.png')
+#def image_development_publisher(image):
+#    print(image)
+#    return Response(open(os.path.join('out', 'publisher_imgs', image + '.png')).read(), mimetype='image/png')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
